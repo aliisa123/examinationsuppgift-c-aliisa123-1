@@ -23,6 +23,7 @@ int main()
         name[i][j] = tolower(name[i][j]);
         }
     }
+
     float average[5];
     float totalsum = 0;
 
@@ -35,16 +36,16 @@ int main()
         totalsum += average[i];
     }
 
-int bestscore =0;
-for (int i = 1;i < 5; i++){
-    if (average[i] > average[bestscore]){
-        bestscore= i;
+    int bestScore =0;
+    for (int i = 1;i < 5; i++){
+    if (average[i] > average[bestScore]){
+        bestScore= i;
     }
-}
+    }
 
     float studentsAverages = totalsum / 5;
 
-    printf("%s\n", name[bestscore]);
+    printf("%s\n", name[bestScore]);
 
     for (int i = 0; i < 5; i++)
     {
